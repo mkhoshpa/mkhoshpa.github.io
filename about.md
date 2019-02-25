@@ -14,7 +14,7 @@ permalink: /about/
   
   
   
-  **BSc in Computer Science, UNB**
+  **BSc in Computer Science, UNBbbbbbbbbb**
   
   First-class Honours CGPA:4.0
   
