@@ -24,13 +24,13 @@ permalink: /about/
   
 ### Research Experience:
 
-  **UNB, Research Asistant**
+  **UNB, Research Assistant**
   
   Sep-2018-present
   
   
   
-  **Canadian Institute for Cybersecurity, Research Asistant**
+  **Canadian Institute for Cybersecurity, Research Assistant**
   
   May-2017-Sep 2017
   
