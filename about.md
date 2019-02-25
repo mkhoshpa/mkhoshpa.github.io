@@ -1,13 +1,13 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /CV/
 ---
 
 
-### CV
+### Education:
 
-Education:
+
   MSc in Computer Science, UNB
   
   Sep 2018-present
@@ -22,7 +22,7 @@ Education:
   
   
   
-Research Exprience:
+### Research Exprience:
 
   UNB,
   
