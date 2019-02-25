@@ -8,13 +8,13 @@ permalink: /about/
 ### Education:
 
 
-  ** MSc in Computer Science, UNB**
+  **MSc in Computer Science, UNB**
   
   Sep 2018-present
   
   
   
-  ** BSc in Computer Science, UNB**
+  **BSc in Computer Science, UNB**
   
   First-class Honours CGPA:4.0
   
@@ -24,13 +24,13 @@ permalink: /about/
   
 ### Research Experience:
 
-  ** UNB, Research Asistant**
+  **UNB, Research Asistant**
   
   Sep-2018-present
   
   
   
-  ** Canadian Institute for Cybersecurity, Research Asistant**
+  **Canadian Institute for Cybersecurity, Research Asistant**
   
   May-2017-Sep 2017
   
