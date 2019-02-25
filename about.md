@@ -22,7 +22,7 @@ permalink: /CV/
   
   
   
-### Research Exprience:
+### Research Experience:
 
   #### UNB, Research Asistant
   
