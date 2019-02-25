@@ -4,6 +4,9 @@ title: About
 permalink: /about/
 ---
 
+
+### CV
+
 Education:
   MSc in Computer Science, UNB
   Sep 2018-present
@@ -23,10 +26,10 @@ Research Exprience:
   
 
 
-### More Information
 
-Research Intrests:
+### Research Intrests
   Machine Learning, Cybersecurity
+  
 ### Contact me
 
 [mkhoshpa[AT]@unb[DOT]ca]
