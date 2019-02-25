@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /CV/
+permalink: /about/
 ---
 
 
