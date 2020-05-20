@@ -15,24 +15,60 @@ To ensure that the node with the highest priority is always on top of the tree, 
 
 In the case of MaxPQ:
 ```python
-def sink(arr, idx):
-    while 2 * idx < len(arr):
-        child = 2 * idx
-        if child + 1 < length:
-            if arr[child + 1 ] > arr[child]:
-                child = child + 1
-        if arr[child] > arr[idx]:
-            arr[child], arr[idx]=arr[idx], arr[child]
-            idx = child
-        else:
-            break
-            
-def swim(arr,idx):
-    while idx // 2 > 0:
-        p = idx // 2
-        if arr[idx]> arr[p]:
-            arr[idx], arr[p] = arr[p], arr[idx]
-            idx = p
-        else:
-            break
+class PQ:
+    def __init__(self, N):
+        self.arr = [None]
+        assert type(N) is int
+        self.N = N
+        
+    def __sink(self, idx):
+        assert type(idx) is int
+        assert idx > 0 and idx < N+1
+        while 2 * idx < self.N:
+            child = 2 * idx
+            if child + 1 < N:
+                if self.arr[child + 1 ] > self.arr[child]:
+                    child = child + 1
+            if arr[child] > arr[idx]:
+                self.arr[child], self.arr[idx] = self.arr[idx], self.arr[child]
+                idx = child
+            else:
+                break
+
+    def __swim(idx):
+        assert type(idx) is int
+        assert idx > 0 and idx < N+1
+        while idx // 2 > 0:
+            p = idx // 2
+            if self.arr[idx]> self.arr[p]:
+                self.arr[idx], self.arr[p] = self.arr[p], self.arr[idx]
+                idx = p
+            else:
+                break
+                
+     def isEmpty():
+        return len(self.arr) == 1
+        
+     def insert(key):
+        self.arr.append(key)
+        self.__swim(len(arr) - 1)
+      
+     def remove():
+        if not self.isEmpty():
+            out = self.arr[1]
+            self.arr[1] = self.arr.pop()
+            self.__sink(1)
+            return out
+        raise Exception('PQ is empty')
+        
+        
 ```
+
+While priority queues areuseful in many applications, they do not support changing the priority of an element in logarithmic time. However, with a minor chamge, we can add indexing to the priority queue. 
+
+
+!["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/indexedPQ.png?style=centerme) 
+
+
+In an Indexed priority queue, we store the information in three arrays. The keys (key), the heap represention of the priority queue (pq), and in array containing the index of each key in the heap representation (qp). So we have qp[pq[i]] = i.
+
