@@ -10,7 +10,7 @@ Before, going throgh the details on how to implement a Indexed Priority Queue, l
 
 !["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/Heap.png?style=centerme)
 
-mg[src$="centerme"] {
+img[src$="centerme"] {
   display:block;
   margin: 0 auto;
 }
