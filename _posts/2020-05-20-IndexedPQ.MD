@@ -167,4 +167,7 @@ class IndexedMinPQ:
         self.key[i] = key
         self.__sink(self.qp[i])
 ```
-One additional detail is to create an indexed priority queue, even in Python, we have to know the maximum number of elements in the queue to support indexing. Since we want to associate each key with an index in order to have fast access. It's trivial to show that insert, deleting the element with the highest priority, and changing the key of a component take logarithmic time.
+Note that even in Python, we have to know the maximum number of elements in the queue to support indexing. Since we want to associate each key with an index in order to have fast access. It's trivial to show that insert, deleting the element with the highest priority, and changing the key of a component take logarithmic time.
+
+Reference: 
+[ Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne] (https://algs4.cs.princeton.edu/lectures/keynote/43MinimumSpanningTrees.pdf)
