@@ -10,7 +10,7 @@ Before going through the details on how to implement an Indexed Priority Queue, 
 
 !["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/Heap.png?style=centerme)
 
-Heaps use swim and sink methods to ensure that the node with the highest priority is always on top of the tree. The swim method ensures that the node does not have a higher priority than its parent, and the sink method makes sure that the node's children have lower priority.
+Heaps use the swim and the sink methods to ensure that the node with the highest priority is always on top of the tree. The swim method ensures that the node does not have a higher priority than its parent, and the sink method makes sure that the node's children have lower priority.
 
 
 In the case of MaxPQ:
