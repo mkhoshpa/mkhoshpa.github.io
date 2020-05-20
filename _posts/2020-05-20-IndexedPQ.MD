@@ -16,22 +16,22 @@ To ensure that the node with the highest priority is always on top of the tree, 
 In the case of MaxPQ:
 ```python
 def sink(arr, idx):
-    while 2*idx < len(arr):
-        child = 2*idx
+    while 2 * idx < len(arr):
+        child = 2 * idx
         if child + 1 < length:
             if arr[child + 1 ] > arr[child]:
                 child = child + 1
         if arr[child] > arr[idx]:
-            arr[child],arr[idx]=arr[idx], arr[child]
+            arr[child], arr[idx]=arr[idx], arr[child]
             idx = child
         else:
             break
             
 def swim(arr,idx):
-    while idx // 2>0:
-        p = idx //2
+    while idx // 2 > 0:
+        p = idx // 2
         if arr[idx]> arr[p]:
-            arr[idx],arr[p] = arr[p],arr[idx]
+            arr[idx], arr[p] = arr[p], arr[idx]
             idx = p
         else:
             break
