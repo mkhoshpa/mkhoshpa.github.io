@@ -12,6 +12,8 @@ Before, going throgh the details on how to implement a Indexed Priority Queue, l
 
 To ensure that the node with the highest priority is always on top of the tree, heaps use swim and sink methods. Swim method ensures that the node does not have higher priority than it's parent and sink makes sure that the children of the node has lower priority.
 
+
+In the case of MaxPQ:
 ```python
 def sink(arr, idx):
     while 2*idx < len(arr):
@@ -22,6 +24,15 @@ def sink(arr, idx):
         if arr[child] > arr[idx]:
             arr[child],arr[idx]=arr[idx], arr[child]
             idx = child
+        else:
+            break
+            
+def swim(arr,idx):
+    while idx // 2>0:
+        p = idx //2
+        if arr[idx]> arr[p]:
+            arr[idx],arr[p] = arr[p],arr[idx]
+            idx = p
         else:
             break
 ```
