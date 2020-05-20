@@ -2,18 +2,25 @@
 layout: post
 title: Indexed Priority Queue Explained with the Python implementation!
 ---
+While priority queues are useful in many applications, they do not support changing the priority of an element in logarithmic time. However, with a minor change, we can add indexing to the priority queue. 
 
-Priority Queue is a an abstract queue-like data structure where each element has a priority. Consider a problem where we have many objects and at each step, we only need the element with the highest (or lowest based on the type) priority. In this situation, priority queue is the data structure to use. But what if at the middle of the program, priority of an object changes? Indexed Priority Queue gives us the ability to change the priority of an element without having to go through all the elements.  
 
-Before, going throgh the details on how to implement a Indexed Priority Queue, let's see how we can implement a priority queue. Priority queues are usually implemented with heaps. A heap is a tree-based data structure where for a node C, the key of C is grater than the the key of C's parent (for MinPQ). To have an efficient access to a node's childs or parent, an array is usualy used to represent the tree where if the key of node i is pq[i], the childs are pq[2\*i] and pq[2\*i+1].
+!["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/indexedPQ.png?style=centerme) 
+
+
+
+Priority Queue is an abstract queue-like data structure where each element has a priority. Consider a problem where we have many objects, and at each step, we only need the element with the highest (or lowest based on the type) priority. In this situation, a priority queue is the data structure to use. But what if in the middle of the program, the priority of an object changes? Indexed Priority Queue gives us the ability to change the priority of an element without having to go through all the elements.  
+
+Before going through the details on how to implement an Indexed Priority Queue, let's see how we can implement a priority queue. Priority queues are usually implemented with heaps. A heap is a tree-based data structure where for node C, C's key is greater than the key of C's parent (for MinPQ). To have efficient access to the node's children or the node's parent, an array is usually used to represent the tree where if the key of node i is pq[i], the children are pq[2\*i] and pq[2\*i+1].
 
 
 !["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/Heap.png?style=centerme)
 
-To ensure that the node with the highest priority is always on top of the tree, heaps use swim and sink methods. Swim method ensures that the node does not have higher priority than it's parent and sink makes sure that the children of the node has lower priority.
+Heaps use swim and sink methods to ensure that the node with the highest priority is always on top of the tree. The swim method ensures that the node does not have a higher priority than its parent, and the sink method makes sure that the node's children have lower priority.
 
 
 In the case of MaxPQ:
+
 ```python
 class PQ:
     def __init__(self, N):
@@ -64,13 +71,13 @@ class PQ:
         
 ```
 
-While priority queues areuseful in many applications, they do not support changing the priority of an element in logarithmic time. However, with a minor chamge, we can add indexing to the priority queue. 
+While priority queues are useful in many applications, they do not support changing the priority of an element in logarithmic time. However, with a minor change, we can add indexing to the priority queue. 
 
 
 !["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/indexedPQ.png?style=centerme) 
 
 
-In an Indexed priority queue, we store the information in three arrays. The keys (keys), the heap represention of the priority queue (pq), and in array containing the index of each key in the heap representation (qp). So we have qp[pq[i]] = i.
+In an Indexed priority queue, we store the information in three arrays. The keys (keys), the heap representation of the priority queue (pq), and an array containing the index of each key in the heap representation (qp). So we have qp[pq[i]] = i.
 
 We also have to modify swim and sink methods to support changing the key of an element inside the queue. 
 
@@ -160,3 +167,4 @@ class IndexedMinPQ:
         self.key[i] = key
         self.__sink(self.qp[i])
 ```
+One additional detail is to create an indexed priority queue, even in Python, we have to know the maximum number of elements in the queue to support indexing. Since we want to associate each key with an index in order to have fast access. It's trivial to show that insert, deleting the element with the highest priority, and changing the key of a component take logarithmic time.
