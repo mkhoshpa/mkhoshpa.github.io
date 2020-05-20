@@ -74,7 +74,7 @@ class PQ:
 While priority queues are useful in many applications, they do not support changing the priority of an element in logarithmic time. However, with a minor change, we can add indexing to the priority queue. 
 
 
-!["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/indexedPQ.png?style=centerme) 
+!["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/indexedminpq.png?style=centerme) 
 
 
 In an Indexed priority queue, we store the information in three arrays. The keys (keys), the heap representation of the priority queue (pq), and an array containing the index of each key in the heap representation (qp). So we have qp[pq[i]] = i.
