@@ -7,6 +7,11 @@ Priority Queue is a an abstract queue-like data structure where each element has
 
 Before, going throgh the details on how to implement a Indexed Priority Queue, let's see how we can implement a priority queue. Priority queues are usually implemented with heaps. A heap is a tree-based data structure where for a node C, the key of C is grater than the the key of C's parent (for MinPQ). To have an efficient access to a node's childs or parent, an array is usualy used to represent the tree where if the key of node i is pq[i], the childs are pq[2\*i] and pq[2\*i+1].
 
-<div style="text-align:center">
-!["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/Heap.png)
-</div>
+
+!["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/Heap.png?style=centerme)
+
+mg[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
+
