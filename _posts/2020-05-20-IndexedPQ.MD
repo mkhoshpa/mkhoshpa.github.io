@@ -10,8 +10,18 @@ Before, going throgh the details on how to implement a Indexed Priority Queue, l
 
 !["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/Heap.png?style=centerme)
 
-img[src$="centerme"] {
-  display:block;
-  margin: 0 auto;
-}
+To ensure that the node with the highest priority is always on top of the tree, heaps use swim and sink methods. Swim method ensures that the node does not have higher priority than it's parent and sink makes sure that the children of the node has lower priority.
 
+'''python
+def sink(arr, idx, length=None):
+    while 2*idx < length:
+        child = 2*idx
+        if child + 1 < length:
+            if arr[child + 1 ] > arr[child]:
+                child = child + 1
+        if arr[child] > arr[idx]:
+            arr[child],arr[idx]=arr[idx], arr[child]
+            idx = child
+        else:
+            break
+'''
