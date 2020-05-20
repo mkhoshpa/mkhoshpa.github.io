@@ -2,12 +2,6 @@
 layout: post
 title: Indexed Priority Queue Explained with the Python implementation!
 ---
-While priority queues are useful in many applications, they do not support changing the priority of an element in logarithmic time. However, with a minor change, we can add indexing to the priority queue. 
-
-
-!["Heap Img"](https://raw.githubusercontent.com/mkhoshpa/mkhoshpa.github.io/master/images/indexedPQ.png?style=centerme) 
-
-
 
 Priority Queue is an abstract queue-like data structure where each element has a priority. Consider a problem where we have many objects, and at each step, we only need the element with the highest (or lowest based on the type) priority. In this situation, a priority queue is the data structure to use. But what if in the middle of the program, the priority of an object changes? Indexed Priority Queue gives us the ability to change the priority of an element without having to go through all the elements.  
 
