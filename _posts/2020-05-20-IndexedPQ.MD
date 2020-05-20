@@ -91,7 +91,7 @@ class IndexedMinPQ:
         self.total = 0
 
     def insert(self,i,key):
-        assert type(i) == int
+        assert type(i) is int
         if i >= self.N:
             raise IndexError('index is out of the range of IndexedMinPQ.')
         if self.key[i] is not None:
@@ -152,7 +152,7 @@ class IndexedMinPQ:
             raise IndexError('index i is not in the range')
         if self.key[i] is None:
             raise IndexError('index i is not in the IndexedMinPQ')
-        assert type(i) == int
+        assert type(i) is int
         assert key < self.key[i]
         self.key[i] = key
         self.__swim(self.qp[i])
@@ -162,7 +162,7 @@ class IndexedMinPQ:
             raise IndexError('index i is not in the range')
         if self.key[i] is None:
             raise IndexError('index i is not in the IndexedMinPQ')
-        assert type(i) == int
+        assert type(i) is int
         assert key > self.key[i]
         self.key[i] = key
         self.__sink(self.qp[i])
