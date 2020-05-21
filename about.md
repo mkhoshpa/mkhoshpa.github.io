@@ -45,3 +45,4 @@ permalink: /about/
 ### Contact me
 
 [mkhoshpa[AT]@unb[DOT]ca]
+[me.khoshpasand[AT]@gmail[DOT]com]
